@@ -3,7 +3,7 @@ import React from 'react';
 
 const DivisionsPage = () => {
   return (
-    <div className="division-outer">
+    <div className="division-outer" id='divisionsPage'>
       
       {/* Heading */}
       <div className="division-header">
@@ -27,7 +27,7 @@ const DivisionsPage = () => {
       {/* Division Content Cards */}
       <div className="division-content">
         <div className="division-content-grid">
-          <div className="division-info-card">
+          <div className="division-info-card flex items-center flex-col">
             <img src="/textBook.png" alt="Education" className="division-info-img" />
             <h1 className="division-info-title">Education Empowers</h1>
             <p className="division-info-text">
@@ -36,7 +36,7 @@ const DivisionsPage = () => {
             </p>
           </div>
 
-          <div className="division-info-card">
+          <div className="division-info-card flex items-center flex-col">
             <img src="/growth.png" alt="Strategy" className="division-info-img" />
             <h1 className="division-info-title">Strategy Guides</h1>
             <p className="division-info-text">
@@ -45,7 +45,7 @@ const DivisionsPage = () => {
             </p>
           </div>
 
-          <div className="division-info-card">
+          <div className="division-info-card flex items-center flex-col ">
             <img src="/light.png" alt="Innovation" className="division-info-img" />
             <h1 className="division-info-title">Innovation Transforms</h1>
             <p className="division-info-text">

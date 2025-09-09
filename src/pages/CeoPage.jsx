@@ -7,11 +7,11 @@ const CeoPage = () => {
       <div className="ceo-inner flex flex-col md:flex-row items-center">
         
         {/* CEO Image */}
-        <div className="ceo-image w-full md:w-1/2 flex justify-center">
+        <div className="ceo-image w-full md:w-1/2 flex justify-center  h-[70vh] items-center ">
           <img 
             src="/ceo.png" 
             alt="CEO"  
-            className="w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 object-contain rounded-2xl"
+            className="w-[90%]  sm:w-60 sm:h-60 md:w-80 md:h-100 object-contain rounded-2xl "
           />
         </div>
         

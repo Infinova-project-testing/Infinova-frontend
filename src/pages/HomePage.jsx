@@ -2,6 +2,10 @@ import React from 'react';
 
 
 const HomePage = () => {
+  const scrollToDivisions=()=>{
+    const divisions=document.getElementById('divisionsPage');
+    divisions?.scrollIntoView({behavior:"smooth"});
+  }
   return (
     <div className="home-container">
       {/* Background Video */}
@@ -21,7 +25,7 @@ const HomePage = () => {
       <h1 className="home-heading home-heading-last">Under One Roof."</h1>
 
       {/* Button */}
-      <button className="explore-btn">Explore Now</button>
+      <button className="explore-btn" onClick={scrollToDivisions}>Explore Now</button>
     </div>
   );
 };

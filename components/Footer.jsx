@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-upper-inner">
           {/* Left Side */}
           <div className="footer-left">
-            <h1 className='text-3xl font-medium'>Consulting Agency For Your Business</h1>
+            <h1 className='text-xl lg:text-3xl font-medium'>Consulting Agency For Your Business</h1>
             <p>The quick fox jumps over the lazy dog</p>
           </div>
           {/* Right Side */}
@@ -88,8 +88,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-<div className="footer-bottom-wrapper">
-  <p className="footer-bottom-text">Made With Love By Figmaland All Right Reserved</p>
+<div className="footer-bottom-wrapper flex justify-center">
+  <div className="footer-bottom-inner w-[85%]  flex justify-between ">
+    <p className="footer-bottom-text"><p>&copy; 2025 Infinova Global. All rights reserved.</p>
+</p>
   <div className="footer-social-icons">
     <a href="#" aria-label="Facebook">
       <img src="/facebook.png" alt="Facebook" />
@@ -103,6 +105,7 @@ const Footer = () => {
     <a href="#" aria-label="YouTube">
       <img src="/youtube.png" alt="YouTube" />
     </a>
+  </div>
   </div>
 </div>
 

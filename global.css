@@ -263,6 +263,7 @@ ion-icon {
   flex: 1 1 280px;
   max-width: 300px;
   padding: 20px;
+  justify-content: center;
 }
 
 .division-info-img {
@@ -538,6 +539,7 @@ ion-icon {
   background: #ffffff;
   border-top: 1px solid #e0e0e0;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-bottom-text {
@@ -571,6 +573,7 @@ ion-icon {
     gap: 0.5rem;
   }
 }
+
 .logoDiv{
   padding:1rem;
 }
@@ -590,4 +593,115 @@ ion-icon {
 }
 .close{
   color:#0598EC;
+}
+
+.menuList{
+   font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+/* careers page */
+/* CareersPage.css */
+
+/* Unique class for page container */
+.careers-page-container {
+  height: 100vh;             /* Full height of viewport */
+  display: flex;
+  flex-direction: column;    /* Stack heading and message vertically */
+  justify-content: center;   /* Center vertically */
+  align-items: center;       /* Center horizontally */
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px;
+  margin: 0;
+  margin-top: 6.5rem;
+}
+
+/* Heading style */
+.careers-page-heading {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Message style */
+.careers-page-message {
+  font-size: 1.5rem;
+  color: #555;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+/* contact us page */
+
+
+/* Main Container */
+.contactus-page-container {
+  padding: 80px 20px;
+  margin: 0 auto;
+  width:100vw;
+  /* max-width: 1200px; */
+  background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
+  text-align: center;
+  margin-top: 6.5rem;
+}
+
+/* Heading */
+.contactus-heading {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+/* Layout */
+.contactus-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .contactus-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Cards */
+.contactus-info-card,
+.contactus-form-card {
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Info List */
+.contactus-info-list p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.contactus-icon {
+  margin-right: 12px;
+}
+
+/* Form Elements */
+.contactus-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactus-input,
+.contactus-textarea {
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.contactus-button {
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
 }

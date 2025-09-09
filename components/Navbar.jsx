@@ -11,7 +11,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="outerNavDiv h-[15vh] w-[100vw] flex justify-center absolute top-0 left-0 z-50">
+    <div className="outerNavDiv h-[15vh] w-[100vw] flex justify-center absolute top-0 left-0 z-50 ">
       {open ? (
         <div className="h-[100vh] w-[70vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] bg-white menu z-50 absolute left-0 overflow-hidden">
           <div className="flex w-full bg-white logoDiv p-4 border-b">
@@ -24,22 +24,22 @@ const Navbar = () => {
           </div>
           <ul className="w-full h-[85%] text-2xl sm:text-3xl font-medium flex flex-col gap-[2vh] menuList cursor-pointer px-4 py-6 bg-gray-100">
             <NavLink to="/eduventures">
-              <li className="cursor-pointer text-left listItems firstItem text-gray-800 py-2">Eduventures</li>
+              <li className="cursor-pointer text-left listItems firstItem text-gray-800 py-2" onClick={handleClick}>Eduventures</li>
             </NavLink>
             <NavLink to="/consultants">
-              <li className="cursor-pointer listItems text-gray-800 py-2">Consultants</li>
+              <li className="cursor-pointer listItems text-gray-800 py-2 " onClick={handleClick}>Consultants</li>
             </NavLink>
             <NavLink to="/technology">
-              <li className="cursor-pointer listItems text-gray-800 py-2">Technology</li>
+              <li className="cursor-pointer listItems text-gray-800 py-2 " onClick={handleClick}>Technology</li>
             </NavLink>
             <NavLink to="/mission">
-              <li className="cursor-pointer listItems text-gray-800 py-2">Mission</li>
+              <li className="cursor-pointer listItems text-gray-800 py-2 " onClick={handleClick}>Mission</li>
             </NavLink>
             <NavLink to="/vision">
-              <li className="cursor-pointer listItems text-gray-800 py-2">Vision</li>
+              <li className="cursor-pointer listItems text-gray-800 py-2 " onClick={handleClick}>Vision</li>
             </NavLink>
             <NavLink to="/blog">
-              <li className="cursor-pointer listItems text-gray-800 py-2">Blog</li>
+              <li className="cursor-pointer listItems text-gray-800 py-2 " onClick={handleClick}>Blog</li>
             </NavLink>
           </ul>
         </div>
