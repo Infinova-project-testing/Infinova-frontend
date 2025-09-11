@@ -1,7 +1,8 @@
 import React from 'react';
-
-
+import Eduventures from '../Eduventures';
+import { useNavigate } from 'react-router-dom';
 const DivisionsPage = () => {
+  const navigate=useNavigate();
   return (
     <div className="division-outer" id='divisionsPage'>
       
@@ -13,7 +14,7 @@ const DivisionsPage = () => {
 
       {/* Division Logo Cards */}
       <div className="division-logo-container">
-        <div className="division-logo-card">
+        <div className="division-logo-card" onClick={()=>navigate('/eduventures')}>
           <img src="/eduventures.png" alt="Eduventures" className="division-logo-img" />
         </div>
         <div className="division-logo-card">
