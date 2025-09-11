@@ -737,3 +737,273 @@ ion-icon {
   border-bottom: 2px solid white;
   padding-bottom: 2px;
 }
+
+/* eduventuresUniversitiesNavbar */
+/* ================================
+   Navbar Container
+================================ */
+.eduventuresForUniversityNavbar {
+  height: 12vh;
+  padding: 0 1rem; /* default padding for xs */
+}
+
+/* Small screens (≥640px) */
+@media (min-width: 640px) {
+  .eduventuresForUniversityNavbar {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Medium screens (≥768px) */
+@media (min-width: 768px) {
+  .eduventuresForUniversityNavbar {
+    padding: 0 2.5rem;
+  }
+
+  .eduventuresForUniversityNavbarRight {
+    gap: 1.5rem; /* spacing between links */
+  }
+}
+
+/* Large screens (≥1024px) */
+@media (min-width: 1024px) {
+  .eduventuresForUniversityNavbar {
+    padding: 0 4rem;
+  }
+
+  .eduventuresForUniversityNavbarRight {
+    gap: 2.5rem;
+  }
+}
+
+/* Extra Large screens (≥1280px) */
+@media (min-width: 1280px) {
+  .eduventuresForUniversityNavbar {
+    padding: 0 6rem;
+  }
+}
+
+/* ================================
+   Logo
+================================ */
+.eduventuresForUniversityNavbarLogo {
+  height: 40px;
+  width: auto;
+}
+
+@media (min-width: 640px) {
+  .eduventuresForUniversityNavbarLogo {
+    height: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .eduventuresForUniversityNavbarLogo {
+    height: 55px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .eduventuresForUniversityNavbarLogo {
+    height: 65px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .eduventuresForUniversityNavbarLogo {
+    height: 75px;
+  }
+}
+
+/* ================================
+   Links
+================================ */
+.eduventuresForUniversityNavbarLink {
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media (min-width: 640px) {
+  .eduventuresForUniversityNavbarLink {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .eduventuresForUniversityNavbarLink {
+    font-size: 16px;
+  }
+}
+
+.eduventuresForUniversityNavbarLink:hover {
+  color: #2563eb; /* Tailwind blue-600 */
+}
+
+/* ================================
+   Dropdown
+================================ */
+.eduventuresForUniversityNavbarDropdownBox {
+  width: 220px;
+  height: 120px;
+  margin-top: 5px;
+}
+
+/* ================================
+   Mobile Menu
+================================ */
+.eduventuresForUniversityNavbarMobile {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .eduventuresForUniversityNavbarMobile {
+    display: none; /* hidden on md and up */
+  }
+}
+
+/* eduventuresForUniversity hero section */
+/* ================================
+   Hero Section Layout
+================================ */
+.eduventuresForUniversitiesHeroSection {
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 100vw;   /* stay inside screen width */
+  overflow: hidden;   /* hide accidental overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .eduventuresForUniversitiesHeroSection {
+    flex-direction: row;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .eduventuresForUniversitiesHeroSection {
+    padding: 4rem 6rem;
+  }
+}
+
+/* ================================
+   Left Side (Text)
+================================ */
+.eduventuresForUniversitiesHeroSectionLeft {
+  flex: 1;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .eduventuresForUniversitiesHeroSectionLeft {
+    max-width: 50%;
+  }
+}
+
+.eduventuresForUniversitiesHeroSectionHeading {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+/* ================================
+   Button
+================================ */
+.eduventuresForUniversitiesHeroSectionButton {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+/* ================================
+   Right Side (Image)
+================================ */
+.eduventuresForUniversitiesHeroSectionRight {
+  flex: 1;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .eduventuresForUniversitiesHeroSectionRight {
+    max-width: 50%;
+  }
+}
+
+.eduventuresForUniversitiesHeroSectionImage {
+  width: 100%;
+  height: auto;
+  max-width: 100%;    /* cannot exceed parent width */
+  max-height: 70vh;   /* limit height relative to viewport */
+  object-fit: contain; /* scale without distortion */
+}
+
+/* eduventures Contact page */
+/* Outer container */
+.EduventuresUniversitiesContact {
+  padding: 3rem 1rem;
+}
+
+/* Stats Section */
+.EduventuresUniversitiesContactStats {
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+/* Stat Boxes (equal size) */
+.EduventuresUniversitiesContactStatBox {
+  width: 220px;
+  height: 120px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Contact Section Box */
+.EduventuresUniversitiesContactBox {
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+/* Left Side (Heading) */
+.EduventuresUniversitiesContactLeft {
+  padding: 1rem;
+}
+
+/* Right Side (Form) */
+.EduventuresUniversitiesContactRight {
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Inputs */
+.EduventuresUniversitiesContactInput {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border: none;
+  outline: none;
+  background: white; /* White background */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Button */
+.EduventuresUniversitiesContactButton {
+  padding: 0.5rem 1.2rem;   /* Shorter width */
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+
+/* Phone field spacing */
+.EduventuresUniversitiesContactPhone {
+  gap: 0.75rem;
+}
+.EduventuresUniversitiesContactStatBox{
+  box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
+}
