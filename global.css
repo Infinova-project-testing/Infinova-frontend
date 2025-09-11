@@ -718,7 +718,7 @@ ion-icon {
   display: flex;
   align-items: center;
   gap: 2rem; /* space between links */
-  padding: 0.75rem 1rem; /* top-bottom, left-right */
+  padding: 0.75rem 1rem 0 1rem; /* top-bottom, left-right */
 }
 
 /* Links */
@@ -734,7 +734,7 @@ ion-icon {
 }
 
 .active-link {
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid white;
   padding-bottom: 2px;
 }
 
@@ -1006,4 +1006,283 @@ ion-icon {
 }
 .EduventuresUniversitiesContactStatBox{
   box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
+}
+.EduventuresUniversitiesContactBox{
+  box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
+}
+/* eduventures courses */
+/* Container spacing */
+.eduventuresCourses-container {
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+/* Heading spacing */
+.eduventuresCourses-heading {
+  margin-bottom: 2.5rem;
+}
+
+/* Cards container spacing */
+.eduventuresCourses-cards {
+  margin-bottom: 2rem;
+  gap: 2rem; /* spacing between cards */
+}
+
+/* Wrapper around card */
+.eduventuresCourses-cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Card spacing */
+.eduventuresCourses-card {
+  width: 280px;
+  height: 380px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Image spacing */
+.eduventuresCourses-image {
+  margin-bottom: 1rem;
+}
+
+.eduventuresCourses-image img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Card content spacing */
+.eduventuresCourses-cardContent {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Brochure Button spacing */
+.eduventuresCourses-btn {
+  margin-top: 1rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #2563eb; /* Tailwind blue-600 */
+  color: white;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  width: 130px;
+  align-self: flex-start;
+}
+
+.eduventuresCourses-btnIcon {
+  margin-left: 8px;
+  background-color: #fca5a5; /* Tailwind pink-300 */
+  color: black;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 1rem;
+  border: 2px solid black;
+}
+
+/* Show more spacing */
+.eduventuresCourses-showmore {
+  margin-top: 0.75rem;
+  align-self: flex-start; /* aligns with card start */
+}
+
+.eduventuresCourses-showmoreBtn {
+  padding: 0.25rem 1rem;
+}
+
+/* Arrow spacing (instead of ml in JSX) */
+.eduventuresCourses-showmoreArrow {
+  margin-left: 0.25rem;
+}
+.eduventuresCourses-card{
+  box-shadow:0.1rem  0.5rem 0.1rem 0.1rem  rgba(0, 0, 0, 0.273);
+  margin-bottom: 1rem;
+}
+.eduventuresCourses-card:hover{
+  transform: scale(1.1);
+}
+.eduventuresCourses-btn{
+  border: 5px solid black;
+  box-shadow: 0.2rem 0.2rem black;
+}
+.eduventuresCourses-showmoreBtn{
+  
+  background-color: #E4EFFF;
+  border:2px solid blue;
+}
+
+/* Eduventures Trainers */
+/* Container spacing */
+.eduventuresTrainers-container {
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+/* Heading spacing */
+.eduventuresTrainers-heading {
+  margin-bottom: 2.5rem;
+}
+
+/* Cards container */
+.eduventuresTrainers-cards {
+  gap: 2rem;
+}
+
+/* Individual card */
+.eduventuresTrainers-card {
+  width: 280px;
+  padding: 1rem; /* moved here instead of JSX */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image styling */
+.eduventuresTrainers-image {
+  margin-bottom: 1rem;
+}
+
+.eduventuresTrainers-image img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Card content */
+.eduventuresTrainers-cardContent {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Divider spacing */
+.eduventuresTrainers-divider {
+  margin: 0.5rem 0;
+  border: 1px solid black;
+}
+
+/* Description spacing */
+.eduventuresTrainers-desc {
+  margin-top: 0.5rem;
+}
+/* Eduventures Testimonials */
+/* Container */
+.eduventures-testimonials-container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+/* Marquee Effect */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 30px;
+}
+.marquee {
+  display: inline-block;
+  animation: marquee 12s linear infinite;
+}
+.marquee img {
+  height: 50px;
+  margin: 0 30px;
+  display: inline-block;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Title */
+.eduventures-testimonials-title {
+
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.highlight {
+  color: #2563eb; /* Tailwind blue-600 */
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.testimonial-img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.testimonial-text {
+  text-align: left;
+}
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.role {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Arrows */
+.arrow-btn {
+  background: white;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.arrow-btn.left {
+  left: -50px;
+}
+.arrow-btn.right {
+  right: -50px;
+}
+
+/* Dots */
+.dots {
+  margin-top: 20px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #2563eb;
 }

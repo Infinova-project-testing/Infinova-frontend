@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const EduventuresNavbar = () => {
   return (
-    <nav className="eduventures-navbar bg-black">
+    <nav className="eduventures-navbar bg-black h-[6vh]">
       <div className="eduventures-navbar-inner">
         <NavLink
           to="/eduventures/forstudents"

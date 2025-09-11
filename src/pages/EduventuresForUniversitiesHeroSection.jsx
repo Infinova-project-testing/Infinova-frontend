@@ -8,7 +8,7 @@ export default function EduventuresForUniversitiesHeroSection() {
       {/* Left Content */}
       <div className="eduventuresForUniversitiesHeroSectionLeft text-center md:text-left">
         <h1 className="eduventuresForUniversitiesHeroSectionHeading font-extrabold leading-snug">
-          “The perfect <span className="text-blue-600">Training</span> &amp;{" "}
+          “The Perfect <span className="text-blue-600">Training</span> &amp;{" "}
           <span className="text-blue-600">Placement</span> Solutions for Your Campus”
         </h1>
 
