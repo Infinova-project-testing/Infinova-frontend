@@ -47,13 +47,13 @@ const EduventuresCourses = () => {
             </div>
 
             {/* Show more button below first card */}
-            {index === 0 && (
+            {/* {index === 0 && (
               <div className="eduventuresCourses-showmore">
                 <button className="eduventuresCourses-showmoreBtn border border-blue-500 text-black font-medium rounded-full shadow hover:bg-gray-100 transition">
                   show more <span className="eduventuresCourses-showmoreArrow">⌄</span>
                 </button>
               </div>
-            )}
+            )} */}
           </div>
         ))}
       </div>

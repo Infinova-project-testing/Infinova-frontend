@@ -3,11 +3,16 @@ import React, { useState } from "react";
 
 export default function EduventuresForUniversitiesNavbar() {
   const [openMenu, setOpenMenu] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const toggleMenu = (menu) => {
+    setOpenMenu(openMenu === menu ? null : menu);
+  };
 
   return (
-    <div className="eduventuresForUniversityNavbar flex items-center  bg-white">
+    <div className="eduventuresForUniversityNavbar">
       {/* Left: Logo */}
-      <div className="eduventuresForUniversityNavbarLeft flex items-center">
+      <div className="eduventuresForUniversityNavbarLeft">
         <img
           src="/eduventures.png"
           alt="Infinova Eduventures"
@@ -15,49 +20,94 @@ export default function EduventuresForUniversitiesNavbar() {
         />
       </div>
 
-      {/* Right: Links */}
-      <div className="eduventuresForUniversityNavbarRight hidden md:flex items-center">
-        {/* For Campus */}
-       
-         <h1 className="text-3xl font-medium">
-             For <span className="text-blue-600">Campus</span>
-         </h1>
-        
+      {/* Right: Desktop Links */}
+      <div className="eduventuresForUniversityNavbarRight">
+        <h1 className="eduventuresForUniversityNavbarHeading">
+          For <span className="highlight">Campus</span>
+        </h1>
+
         {/* Our Programs */}
-        <div
-          className="eduventuresForUniversityNavbarDropdown relative"
-          onMouseEnter={() => setOpenMenu("programs")}
-          onMouseLeave={() => setOpenMenu(null)}
-        >
-          <button className="eduventuresForUniversityNavbarLink flex items-center space-x-1">
+        <div className="eduventuresForUniversityNavbarDropdown">
+          <button
+            className="eduventuresForUniversityNavbarLink"
+            onClick={() => toggleMenu("programs")}
+          >
             <span>Our Programs</span>
-            <span>▼</span>
+            <span>{openMenu === "programs" ? "▲" : "▼"}</span>
           </button>
           {openMenu === "programs" && (
-            <div className="eduventuresForUniversityNavbarDropdownBox absolute top-full left-0 bg-white shadow-md"></div>
+            <div className="eduventuresForUniversityNavbarDropdownBox">
+              <a href="#">Program 1</a>
+              <a href="#">Program 2</a>
+              <a href="#">Program 3</a>
+            </div>
           )}
         </div>
 
         {/* Our Partners */}
-        <div
-          className="eduventuresForUniversityNavbarDropdown relative"
-          onMouseEnter={() => setOpenMenu("partners")}
-          onMouseLeave={() => setOpenMenu(null)}
-        >
-          <button className="eduventuresForUniversityNavbarLink flex items-center space-x-1">
+        <div className="eduventuresForUniversityNavbarDropdown">
+          <button
+            className="eduventuresForUniversityNavbarLink"
+            onClick={() => toggleMenu("partners")}
+          >
             <span>Our Partners</span>
-            <span>▼</span>
+            <span>{openMenu === "partners" ? "▲" : "▼"}</span>
           </button>
           {openMenu === "partners" && (
-            <div className="eduventuresForUniversityNavbarDropdownBox absolute top-full left-0 bg-white shadow-md"></div>
+            <div className="eduventuresForUniversityNavbarDropdownBox">
+              <a href="#">Partner 1</a>
+              <a href="#">Partner 2</a>
+              <a href="#">Partner 3</a>
+            </div>
           )}
         </div>
       </div>
 
-      {/* Mobile Menu Icon */}
-      <div className="eduventuresForUniversityNavbarMobile md:hidden flex items-center">
-        <button className="text-2xl">☰</button>
+      {/* Mobile Hamburger Icon */}
+      <div className="eduventuresForUniversityNavbarMobile">
+        <button
+          className="eduventuresForUniversityNavbarHamburger"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          {mobileOpen ? "✖" : "☰"}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="eduventuresForUniversityNavbarMobileMenu">
+          <h1 className="eduventuresForUniversityNavbarHeading">
+            For <span className="highlight">Campus</span>
+          </h1>
+          <button
+            className="eduventuresForUniversityNavbarMobileLink"
+            onClick={() => toggleMenu("programs")}
+          >
+            Our Programs {openMenu === "programs" ? "▲" : "▼"}
+          </button>
+          {openMenu === "programs" && (
+            <div className="eduventuresForUniversityNavbarDropdownBox">
+              <a href="#">Program 1</a>
+              <a href="#">Program 2</a>
+              <a href="#">Program 3</a>
+            </div>
+          )}
+
+          <button
+            className="eduventuresForUniversityNavbarMobileLink"
+            onClick={() => toggleMenu("partners")}
+          >
+            Our Partners {openMenu === "partners" ? "▲" : "▼"}
+          </button>
+          {openMenu === "partners" && (
+            <div className="eduventuresForUniversityNavbarDropdownBox">
+              <a href="#">Partner 1</a>
+              <a href="#">Partner 2</a>
+              <a href="#">Partner 3</a>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -862,6 +862,151 @@ ion-icon {
     display: none; /* hidden on md and up */
   }
 }
+.eduventuresForUniversityNavbar {
+  display: flex;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  position: relative;
+}
+
+/* Left side (logo) */
+.eduventuresForUniversityNavbarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.eduventuresForUniversityNavbarLeft img {
+  height: 40px;
+  width: auto;
+}
+
+/* Right side (desktop links) */
+.eduventuresForUniversityNavbarRight {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .eduventuresForUniversityNavbar {
+    justify-content: normal; /* Desktop: natural alignment */
+  }
+
+  .eduventuresForUniversityNavbarRight {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* spacing between links */
+  }
+}
+
+.eduventuresForUniversityNavbarHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #2563eb;
+}
+
+/* Dropdown */
+.eduventuresForUniversityNavbarDropdown {
+  position: relative;
+}
+
+.eduventuresForUniversityNavbarLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.eduventuresForUniversityNavbarLink:hover {
+  color: #2563eb;
+}
+
+.eduventuresForUniversityNavbarDropdownBox {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 20;
+}
+
+.eduventuresForUniversityNavbarDropdownBox a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.95rem;
+}
+
+.eduventuresForUniversityNavbarDropdownBox a:hover {
+  color: #2563eb;
+}
+
+/* Mobile */
+.eduventuresForUniversityNavbarMobile {
+  display: none; /* hidden by default (desktop) */
+}
+
+.eduventuresForUniversityNavbarHamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .eduventuresForUniversityNavbar {
+    justify-content: space-around; /* Mobile: space-around */
+  }
+
+  .eduventuresForUniversityNavbarMobile {
+    display: flex; /* show hamburger only on mobile */
+    align-items: center;
+  }
+
+  .eduventuresForUniversityNavbarRight {
+    display: none; /* hide desktop links on mobile */
+  }
+}
+
+/* Mobile Menu */
+.eduventuresForUniversityNavbarMobileMenu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 50;
+}
+
+.eduventuresForUniversityNavbarMobileLink {
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.eduventuresForUniversityNavbarMobileLink:hover {
+  color: #2563eb;
+}
 
 /* eduventuresForUniversity hero section */
 /* ================================
@@ -954,6 +1099,9 @@ ion-icon {
 .EduventuresUniversitiesContactStats {
   margin-bottom: 3rem;
   gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Stat Boxes (equal size) */
@@ -962,6 +1110,7 @@ ion-icon {
   height: 120px;
   text-align: center;
   padding: 1.5rem;
+  box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
 }
 
 /* Contact Section Box */
@@ -969,6 +1118,10 @@ ion-icon {
   padding: 2.5rem;
   margin-bottom: 2rem;
   gap: 2rem;
+  box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; /* default: stacked for mobile */
 }
 
 /* Left Side (Heading) */
@@ -980,6 +1133,8 @@ ion-icon {
 .EduventuresUniversitiesContactRight {
   padding: 1rem;
   gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Inputs */
@@ -990,26 +1145,74 @@ ion-icon {
   outline: none;
   background: white; /* White background */
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Phone field spacing */
+.EduventuresUniversitiesContactPhone {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.EduventuresUniversitiesContactPhone input:first-child {
+  flex: 0 0 70px;  /* fixed width for +91 field */
+  text-align: center;
+}
+
+.EduventuresUniversitiesContactPhone input:last-child {
+  flex: 1; /* take remaining space */
 }
 
 /* Button */
 .EduventuresUniversitiesContactButton {
-  padding: 0.5rem 1.2rem;   /* Shorter width */
+  padding: 0.5rem 1.2rem;
   margin-top: 0.75rem;
   font-size: 0.9rem;
 }
 
+/* Responsive Layouts */
+@media (min-width: 768px) {
+  .EduventuresUniversitiesContactBox {
+    flex-direction: row; /* Desktop: heading and form side by side */
+    align-items: center;
+    justify-content: space-between;
+  }
 
-/* Phone field spacing */
-.EduventuresUniversitiesContactPhone {
-  gap: 0.75rem;
+  .EduventuresUniversitiesContactLeft,
+  .EduventuresUniversitiesContactRight {
+    flex: 1;
+  }
 }
-.EduventuresUniversitiesContactStatBox{
-  box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
+
+@media (max-width: 768px) {
+  .EduventuresUniversitiesContactBox {
+    flex-direction: column; /* Mobile: stack vertically */
+    align-items: center;
+  }
+
+  .EduventuresUniversitiesContactLeft,
+  .EduventuresUniversitiesContactRight {
+    width: 100%;
+  }
 }
-.EduventuresUniversitiesContactBox{
-  box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
+
+/* Keep +91 and Phone always in one line */
+@media (max-width: 480px) {
+  .EduventuresUniversitiesContactPhone {
+    flex-direction: row; /* force same line */
+  }
+
+  .EduventuresUniversitiesContactPhone input:first-child {
+    flex: 0 0 60px; /* slightly smaller on mobile */
+  }
+
+  .EduventuresUniversitiesContactPhone input:last-child {
+    flex: 1;
+  }
 }
+
 /* eduventures courses */
 /* Container spacing */
 .eduventuresCourses-container {
@@ -1178,6 +1381,7 @@ ion-icon {
   text-align: center;
   margin: 50px auto;
   max-width: 1000px;
+  padding: 0 15px;
 }
 
 /* Marquee Effect */
@@ -1191,8 +1395,8 @@ ion-icon {
   animation: marquee 12s linear infinite;
 }
 .marquee img {
-  height: 50px;
-  margin: 0 30px;
+  height: 40px;
+  margin: 0 20px;
   display: inline-block;
 }
 @keyframes marquee {
@@ -1202,9 +1406,9 @@ ion-icon {
 
 /* Title */
 .eduventures-testimonials-title {
-
   font-weight: bold;
   margin-bottom: 40px;
+  font-size: 2rem;
 }
 .highlight {
   color: #2563eb; /* Tailwind blue-600 */
@@ -1216,6 +1420,7 @@ ion-icon {
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-wrap: wrap;
 }
 .testimonial-content {
   display: flex;
@@ -1226,15 +1431,19 @@ ion-icon {
   padding: 20px 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
 }
 .testimonial-img {
-  width: 220px;
-  height: 180px;
+  width: 200px;
+  height: 160px;
   object-fit: cover;
   border-radius: 10px;
+  flex-shrink: 0;
 }
 .testimonial-text {
   text-align: left;
+  flex: 1;
+  min-width: 250px;
 }
 .quote {
   font-size: 16px;
@@ -1252,22 +1461,32 @@ ion-icon {
 
 /* Arrows */
 .arrow-btn {
-  background: white;
+  background: rgba(255,255,255,0.9);
   border: 2px solid #2563eb;
   color: #2563eb;
   border-radius: 50%;
-  padding: 12px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 18px;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
 }
+.arrow-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+/* Desktop - arrows outside the card */
 .arrow-btn.left {
-  left: -50px;
+  left: -40px;
 }
 .arrow-btn.right {
-  right: -50px;
+  right: -40px;
 }
 
 /* Dots */
@@ -1286,643 +1505,81 @@ ion-icon {
 .dot.active {
   background-color: #2563eb;
 }
-/* BookingForm.css */
 
-.booking-container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
+/* ========================= */
+/* Responsive Media Queries */
+/* ========================= */
 
-.booking-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 48px 40px;
-
-  /* Dark offset shadow like screenshot */
-  box-shadow:  0px rgba(0, 0, 0, 0.3) 8px 8px;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  max-width: 900px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.booking-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
-}
-
-.booking-title {
-  font-size: 50px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 32px;
-  color: #1f2937;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-  max-width: 45%;
-}
-
-.text-blue {
-  color: #0056D2;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.input-group {
-  width: 100%;
-  
-}
-
-.form-input {
-  width: 100%;
-  padding: 16px 20px;
-  border: 2px solid rgba(229, 231, 235, 0.8);
-  border-radius: 12px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  color: #374151;
-  outline: none;
-  font-family: inherit;
-
-
-  appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-.form-input:focus {
-  border-color: #3b82f6;
-  box-shadow:
-    0 0 0 4px rgba(59, 130, 246, 0.1),
-    0 8px 25px -8px rgba(59, 130, 246, 0.2);
-  background: rgba(255, 255, 255, 0.95);
-  transform: translateY(-1px);
-}
-
-.form-input::placeholder {
-  color: #9ca3af;
-}
-
-.phone-group {
-  display: flex;
-  gap: 8px;
-  width: 100%;
-}
-
-.country-code {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(229, 231, 235, 0.8);
-  border-radius: 12px;
-  padding: 16px;
-  font-size: 16px;
-  color: #374151;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  min-width: 70px;
-  justify-content: center;
-}
-
-.phone-input {
-  flex: 1;
-}
-
-.submit-button {
-  width: 100%;
-  background: linear-gradient(135deg, #3b82f6 0%, #0056D2 100%);
-  color: white;
-  padding: 18px 32px;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 24px;
-  position: relative;
-  overflow: hidden;
-  font-family: inherit;
-}
-
-.submit-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s ease;
-}
-
-.submit-button:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 20px 25px -5px rgba(59, 130, 246, 0.3),
-    0 10px 10px -5px rgba(59, 130, 246, 0.1);
-  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-}
-
-.submit-button:hover::before {
-  left: 100%;
-}
-
-.submit-button:hover .arrow-icon {
-  transform: translateX(4px);
-}
-
-.submit-button:active {
-  transform: translateY(-1px);
-}
-
-.arrow-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-/* Responsive Design */
-@media (max-width: 640px) {
-  .booking-container {
-    padding: 16px;
+/* Tablets / iPad */
+@media (max-width: 992px) {
+  .eduventures-testimonials-title {
+    font-size: 1.8rem;
   }
-
-  .booking-card {
-    padding: 32px 24px;
-    border-radius: 20px;
+  .testimonial-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
-
-  .booking-title {
-    font-size: 28px;
-    margin-bottom: 24px;
+  .testimonial-img {
+    width: 180px;
+    height: 140px;
+    margin-bottom: 15px;
   }
-
-  .form-input {
-    padding: 14px 16px;
-    font-size: 15px;
-  }
-
-  .country-code {
-    padding: 14px 12px;
-    min-width: 60px;
-    font-size: 15px;
-  }
-
-  .submit-button {
-    padding: 16px 24px;
-    font-size: 16px;
-  }
-
-  .arrow-icon {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .booking-card {
-    padding: 24px 20px;
-  }
-
-  .booking-title {
-    font-size: 24px;
-  }
-
-  .phone-group {
-    gap: 6px;
-  }
-}
-
-/* Focus styles for accessibility */
-.form-input:focus,
-.submit-button:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Disabled state */
-.form-input:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.submit-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.submit-button:disabled:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-/* EducationBanner.css */
-
-.education-banner {
-  background: linear-gradient(135deg, #e6f3ff 0%, #cce7ff 50%, #b3dbff 100%);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 2rem 1rem;
-  font-family: 'Arial', sans-serif;
-}
-
-.banner-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  width: 100%;
-}
-
-/* Left Content Section */
-.content-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-content {
-  max-width: 500px;
-}
-
-.main-heading {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  letter-spacing: -0.5px;
-}
-
-.highlight {
-  color: #2563eb;
-}
-
-.contact-btn {
-  background: #2563eb;
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.contact-btn:hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
-}
-
-/* Right Illustration Section */
-.illustration-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.character-container {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Icons */
-.icon {
-  position: absolute;
-  z-index: 10;
-}
-
-.graduation-cap {
-  top: 20px;
-  left: 50px;
-  transform: rotate(-15deg);
-}
-
-.cap-base {
-  width: 60px;
-  height: 15px;
-  background: #4a5568;
-  border-radius: 30px;
-  position: relative;
-}
-
-.cap-top {
-  width: 80px;
-  height: 4px;
-  background: #2d3748;
-  position: absolute;
-  top: -8px;
-  left: -10px;
-  border-radius: 2px;
-}
-
-.tassel {
-  width: 2px;
-  height: 20px;
-  background: #f7fafc;
-  position: absolute;
-  right: 5px;
-  top: -8px;
-}
-
-.briefcase {
-  bottom: 60px;
-  right: 40px;
-  transform: rotate(10deg);
-}
-
-.briefcase-body {
-  width: 50px;
-  height: 35px;
-  background: #4a5568;
-  border-radius: 4px;
-  position: relative;
-}
-
-.briefcase-handle {
-  width: 20px;
-  height: 8px;
-  border: 3px solid #4a5568;
-  border-bottom: none;
-  border-radius: 10px 10px 0 0;
-  position: absolute;
-  top: -8px;
-  left: 15px;
-  background: transparent;
-}
-
-.briefcase-lock {
-  width: 8px;
-  height: 4px;
-  background: #e2e8f0;
-  position: absolute;
-  top: 12px;
-  left: 21px;
-  border-radius: 1px;
-}
-
-/* Split Character */
-.split-character {
-  display: flex;
-  position: relative;
-  width: 200px;
-  height: 300px;
-}
-
-.character-half {
-  width: 50%;
-  position: relative;
-  overflow: hidden;
-}
-
-.character-head {
-  width: 100px;
-  height: 120px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.hair {
-  width: 80px;
-  height: 50px;
-  background: #2d1810;
-  border-radius: 40px 40px 0 0;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  z-index: 1;
-}
-
-.face {
-  width: 70px;
-  height: 80px;
-  background: #fdbcb4;
-  border-radius: 35px;
-  position: absolute;
-  top: 30px;
-  left: 15px;
-  z-index: 2;
-}
-
-.eye {
-  width: 8px;
-  height: 8px;
-  background: #2d3748;
-  border-radius: 50%;
-  position: absolute;
-  top: 25px;
-}
-
-.left-eye {
-  left: 18px;
-}
-
-.right-eye {
-  right: 18px;
-}
-
-.eyebrow {
-  width: 12px;
-  height: 3px;
-  background: #2d1810;
-  border-radius: 2px;
-  position: absolute;
-  top: 18px;
-}
-
-.left-eyebrow {
-  left: 15px;
-}
-
-.right-eyebrow {
-  right: 15px;
-}
-
-.ear {
-  width: 15px;
-  height: 20px;
-  background: #fdbcb4;
-  border-radius: 50%;
-  position: absolute;
-  top: 35px;
-}
-
-.left-ear {
-  left: 0;
-}
-
-.right-ear {
-  right: 0;
-}
-
-.character-body {
-  width: 100px;
-  height: 180px;
-  position: relative;
-  margin: 0 auto;
-  top: -10px;
-}
-
-/* Student Side Styling */
-.student-side .student-shirt {
-  width: 80px;
-  height: 100px;
-  background: #e53e3e;
-  border-radius: 0 0 10px 10px;
-  position: absolute;
-  left: 10px;
-  top: 0;
-}
-
-.backpack-strap {
-  width: 8px;
-  height: 80px;
-  background: #2d3748;
-  position: absolute;
-  left: 35px;
-  top: 10px;
-  border-radius: 4px;
-}
-
-.left-arm {
-  width: 25px;
-  height: 60px;
-  background: #fdbcb4;
-  position: absolute;
-  left: 5px;
-  top: 20px;
-  border-radius: 12px;
-}
-
-.book {
-  width: 18px;
-  height: 25px;
-  background: #4a5568;
-  position: absolute;
-  bottom: 0;
-  left: 3px;
-  border-radius: 2px;
-}
-
-.book::after {
-  content: '';
-  width: 12px;
-  height: 2px;
-  background: #f7fafc;
-  position: absolute;
-  top: 8px;
-  left: 3px;
-  border-radius: 1px;
-}
-
-/* Professional Side Styling */
-.professional-side .suit {
-  width: 80px;
-  height: 100px;
-  background: #2d3748;
-  border-radius: 0 0 10px 10px;
-  position: absolute;
-  left: 10px;
-  top: 0;
-}
-
-.tie {
-  width: 12px;
-  height: 50px;
-  background: #e53e3e;
-  position: absolute;
-  left: 44px;
-  top: 15px;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-}
-
-.collar {
-  width: 30px;
-  height: 20px;
-  background: #f7fafc;
-  position: absolute;
-  left: 35px;
-  top: 0;
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .banner-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .testimonial-text {
     text-align: center;
   }
-
-  .main-heading {
-    font-size: 2rem;
+  /* Move arrows inside card */
+  .arrow-btn.left {
+    left: 10px;
   }
-
-  .image-container {
-    max-width: 350px;
-  }
-
-  .character-image {
-    max-width: 300px;
+  .arrow-btn.right {
+    right: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .education-banner {
-    padding: 1rem 0.5rem;
-  }
-
-  .main-heading {
+/* Mobile phones */
+@media (max-width: 600px) {
+  .eduventures-testimonials-title {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 25px;
   }
-
-  .contact-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+  .marquee img {
+    height: 30px;
+    margin: 0 10px;
   }
-
-  .image-container {
-    max-width: 280px;
+  .testimonial-content {
+    gap: 15px;
+    padding: 15px;
   }
-
-  .character-image {
-    max-width: 250px;
+  .testimonial-img {
+    width: 150px;
+    height: 120px;
+  }
+  .quote {
+    font-size: 14px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .role {
+    font-size: 13px;
+  }
+  /* Hide arrows on mobile */
+  .arrow-btn {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .arrow-btn.left {
+    left: 5px; /* inside card */
+  }
+  .arrow-btn.right {
+    right: 5px; /* inside card */
+  }
+  .arrow-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    padding: 5px;
   }
 }
