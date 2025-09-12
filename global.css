@@ -1007,3 +1007,90 @@ ion-icon {
 .EduventuresUniversitiesContactStatBox{
   box-shadow: -0.5rem 0.5rem rgba(0, 0, 0, 0.231);
 }
+
+/* EduventuresForStudentsNavbar */
+/* Navbar container */
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #F2F4F8;
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.search-input-wrapper:hover {
+  background-color: #f1f3f4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.search-input-wrapper:focus-within {
+  background-color: #ffffff;
+  border-color: #4285f4;
+  box-shadow: 0 4px 16px rgba(66, 133, 244, 0.15);
+}
+.search-input-wrapper:focus-within .search-icon {
+  color: #4285f4;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.search-input::placeholder {
+  color: black;
+  font-size: 16px;
+}
+
+.search-input:focus::placeholder {
+  color: #dadce0;
+}
+
+/* Debug info - remove in production */
+.debug-info {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  padding: 10px;
+  background-color: #F2F4F8;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-container {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .search-input-wrapper {
+    padding: 14px 16px;
+  }
+
+  .search-input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input-wrapper {
+    padding: 12px 14px;
+  }
+}

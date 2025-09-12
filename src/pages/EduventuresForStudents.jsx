@@ -1,9 +1,10 @@
 import React from 'react'
+import EduventuresForStudentsNavbar from '../../components/EduventuresForStudentsNavbar'
 
 const EduventuresForStudents = () => {
   return (
     <div>
-      Students
+      <EduventuresForStudentsNavbar/>
     </div>
   )
 }
