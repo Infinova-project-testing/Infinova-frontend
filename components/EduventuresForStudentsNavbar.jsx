@@ -23,7 +23,7 @@ export default function EduventuresForUniversitiesNavbar() {
         {/* For Campus */}
        
          <h1 className="text-3xl  font-family: Montserrat font-bold w-2xl">
-             For <span className="text-blue-600">Campus</span>
+             For <span className="text-blue-600">Students</span>
          </h1>
         
         {/* Our Programs */}
