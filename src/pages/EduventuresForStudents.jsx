@@ -4,6 +4,7 @@ import BookingFormForStudentsEduventures from '../../components/BookingFormForSt
 import EduventuresForStudentsHeroSection from '../../components/EduventuresForStudentsHeroSection'
 import EduventuresTrainers from '../../components/EduventuresForStudentsTrainers'
 import EduventuresStudentsTestimonials from '../../components/EduventuresStudentsTestimonials'
+import EduventuresForStudentsSoftSkills from '../../components/EduventuresForStudentsSoftSkills'
 import EduventuresCourses from './EduventuresCourses'
 
 
@@ -14,6 +15,7 @@ const EduventuresForStudents = () => {
       <EduventuresForStudentsHeroSection/>
       <BookingFormForStudentsEduventures/>
       <EduventuresCourses/>
+      <EduventuresForStudentsSoftSkills/>
       <EduventuresTrainers/>
       <EduventuresStudentsTestimonials/>
     </div>
