@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="outerNavDiv h-[15vh] w-[100vw] flex justify-center absolute top-0 left-0 z-50 ">
       {open ? (
-        <div className="h-[100vh] w-[70vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] bg-white menu z-50 absolute left-0 overflow-hidden">
+        <div className="h-[100vh] w-[70vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] bg-white menu z-50 absolute left-0 overflow-hidden onClickMenu">
           <div className="flex w-full bg-white logoDiv p-4 border-b">
             <ion-icon
               name={`${icon}-outline`}
@@ -50,13 +50,13 @@ const Navbar = () => {
           <ion-icon
             name={`${icon}-outline`}
             onClick={handleClick}
-            className="text-3xl sm:text-4xl cursor-pointer"
+            className="text-3xl sm:text-4xl cursor-pointer hamburgerIcon"
           ></ion-icon>
           <NavLink to="/">
             <img
               src="/global.png"
               alt=""
-              className="object-contain w-[30vw] sm:w-[25vw] md:w-[20vw] cursor-pointer"
+              className="object-contain w-[30vw] sm:w-[25vw] md:w-[20vw] cursor-pointer globalIcon"
             />
           </NavLink>
         </div>

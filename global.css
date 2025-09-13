@@ -81,9 +81,9 @@ ion-icon {
 /* clients page */
 /* ===== Clients Section ===== */
 .clients-section {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   margin-bottom: 4rem;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
 }
 
 /* Heading */
@@ -181,7 +181,9 @@ ion-icon {
   animation: marquee 18s linear infinite;
 }
 
-
+.hamburgerIcon{
+  font-size: 5rem;
+}
 
 /* divisions page */
 /* Outer Container */
@@ -389,6 +391,7 @@ ion-icon {
 
 /* footer page */
 /* ===== Footer Container ===== */
+/* ===== Footer Container ===== */
 .footer-container {
   width: 100%;
   display: flex;
@@ -409,8 +412,8 @@ ion-icon {
 }
 
 .footer-upper-inner {
-  width: 90vw;
-  max-width: 80vw;
+  width: 90%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -428,7 +431,7 @@ ion-icon {
 
 .footer-left {
   width: 100%;
-  max-width: 50%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -439,8 +442,8 @@ ion-icon {
   border-radius: 12px;
   color: #ffffff;
   font-weight: 500;
-  font-size: 1.25rem;
-  padding: 0.5rem 1.25rem;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -460,27 +463,15 @@ ion-icon {
 }
 
 .footer-lower-inner {
-  width: 90vw;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
 }
 
 .footer-column {
-  width: 45%;
-}
-
-@media (min-width: 640px) {
-  .footer-column {
-    width: 30%;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer-column {
-    width: auto;
-  }
+  min-width: 160px;
 }
 
 .footer-links-title {
@@ -513,23 +504,15 @@ ion-icon {
 }
 
 .footer-contact-item img {
-  width: 1.5rem;
+  width: 1.3rem;
 }
 
 .footer-contact-item p {
   margin: 0;
+  font-size: 0.95rem;
 }
 
-/* ===== Bottom Links Placeholder ===== */
-.footer-bottom-section {
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0;
-  background: #145c68;
-  color: #ddd;
-  font-size: 0.9rem;
-}
-/* ===== Bottom Section (Social Icons + Text) ===== */
+/* ===== Bottom Section ===== */
 .footer-bottom-wrapper {
   width: 100%;
   padding: 1rem 2rem;
@@ -539,23 +522,26 @@ ion-icon {
   background: #ffffff;
   border-top: 1px solid #e0e0e0;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 1rem;
 }
 
 .footer-bottom-text {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #555555;
   margin: 0;
+  text-align: center;
 }
 
 .footer-social-icons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -564,42 +550,68 @@ ion-icon {
   transform: scale(1.1);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .footer-upper-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .footer-bottom-wrapper {
     flex-direction: column;
-    justify-content: center;
     text-align: center;
-    gap: 0.5rem;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
   }
 }
 
-.logoDiv{
-  padding:1rem;
+@media (max-width: 480px) {
+  .footer-contact-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .footer-social-icons img {
+    width: 24px;
+    height: 24px;
+  }
 }
-.navbarImage{
+
+/* ===== Navbar Extra ===== */
+.logoDiv {
+  padding: 1rem;
+}
+
+.navbarImage {
   margin-left: auto;
 }
-.menuList{
-  padding:1.5rem 1rem;
+
+.menuList {
+  padding: 1.5rem 1rem;
   padding-left: 4rem;
-}
-.listItems{
-  padding: 0.5rem 0;
-}
-.listItems:hover{
-  color:#0598EC;
-
-}
-.close{
-  color:#0598EC;
-}
-
-.menuList{
-   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
+
+.listItems {
+  padding: 0.5rem 0;
+}
+
+.listItems:hover {
+  color: #0598EC;
+}
+
+.close {
+  color: #0598EC;
+}
+
 /* careers page */
 /* CareersPage.css */
 

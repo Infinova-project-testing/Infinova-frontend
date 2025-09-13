@@ -7,8 +7,8 @@ const AboutUs = () => {
       <div className="aboutus-inner flex flex-col lg:flex-row w-[90vw]">
         
         {/* Left Side Image */}
-        <div className="aboutus-image w-full lg:w-1/2 h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto">
-          {/* Add your <img> tag here if needed */}
+        <div className="aboutus-image w-full lg:w-1/2 h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto flex justify-center">
+          <img src="/aboutUsImage.png" alt="" className='h-[100%]'/>
         </div>
 
         {/* Right Side Content */}

@@ -14,13 +14,13 @@ const DivisionsPage = () => {
 
       {/* Division Logo Cards */}
       <div className="division-logo-container">
-        <div className="division-logo-card" onClick={()=>navigate('/eduventures')}>
+        <div className="division-logo-card cursor-pointer" onClick={()=>navigate('/eduventures')}>
           <img src="/eduventures.png" alt="Eduventures" className="division-logo-img" />
         </div>
-        <div className="division-logo-card">
+        <div className="division-logo-card cursor-pointer">
           <img src="/CON_Logo.png" alt="Consultants" className="division-logo-img" />
         </div>
-        <div className="division-logo-card">
+        <div className="division-logo-card cursor-pointer">
           <img src="/TECH_Logo.png" alt="Technologies" className="division-logo-img" />
         </div>
       </div>
