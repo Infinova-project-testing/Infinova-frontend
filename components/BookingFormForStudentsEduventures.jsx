@@ -31,7 +31,7 @@ export default function BookingForm() {
           Book <span className="text-blue">Free</span> LIVE Class Today !
         </h1>
         
-        <div className="form-container">
+        <div className="form-container font-family:montserrat">
           <div className="input-group">
             <select
               name="program"
