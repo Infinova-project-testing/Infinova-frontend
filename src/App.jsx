@@ -10,6 +10,7 @@ import Technology from "./pages/Technology";
 import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
 import Blog from "./pages/Blog";
+import ComingSoon from "./pages/comingsoon";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/mission" element={<Mission />} />
         <Route path="/vision" element={<Vision />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
       </Route>
 
       {/* Standalone pages with unique Navbar/Footer */}

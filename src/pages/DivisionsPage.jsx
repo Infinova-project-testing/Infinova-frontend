@@ -17,10 +17,12 @@ const DivisionsPage = () => {
         <div className="division-logo-card cursor-pointer" onClick={()=>navigate('/eduventures')}>
           <img src="/eduventures.png" alt="Eduventures" className="division-logo-img" />
         </div>
-        <div className="division-logo-card cursor-pointer">
+        <div className="division-logo-card cursor-pointer"
+          onClick={()=>navigate('/coming-soon')}>
           <img src="/CON_Logo.png" alt="Consultants" className="division-logo-img" />
         </div>
-        <div className="division-logo-card cursor-pointer">
+        <div className="division-logo-card cursor-pointer"
+          onClick={()=>navigate('/coming-soon')}>
           <img src="/TECH_Logo.png" alt="Technologies" className="division-logo-img" />
         </div>
       </div>
