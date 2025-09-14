@@ -5,6 +5,8 @@ import EduventuresForStudentsHeroSection from '../../components/EduventuresForSt
 import EduventuresTrainers from '../../components/EduventuresForStudentsTrainers'
 import EduventuresStudentsTestimonials from '../../components/EduventuresStudentsTestimonials'
 import EduventuresForStudentsSoftSkills from '../../components/EduventuresForStudentsSoftSkills'
+import EduventuresForStudentsMAsterClassCard from '../../components/EduventuresForStudentsMasterClassCard'
+
 import EduventuresCourses from './EduventuresCourses'
 
 
@@ -14,10 +16,12 @@ const EduventuresForStudents = () => {
       <EduventuresForStudentsNavbar/>
       <EduventuresForStudentsHeroSection/>
       <BookingFormForStudentsEduventures/>
+      <EduventuresForStudentsMAsterClassCard/>
       <EduventuresCourses/>
       <EduventuresForStudentsSoftSkills/>
       <EduventuresTrainers/>
       <EduventuresStudentsTestimonials/>
+      
     </div>
   )
 }

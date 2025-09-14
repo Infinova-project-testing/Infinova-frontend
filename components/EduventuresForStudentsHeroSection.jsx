@@ -8,9 +8,9 @@ const EduventuresForStudentsHeroSection = () => {
         {/* Left Content Section */}
         <div className="content-section">
           <div className="text-content">
-            <h1 className="main-heading">
-              Your dream Career is one skill away, Join{' '}
-              <span className="highlight">Infinova Eduventures</span> now!!!
+            <h1 className="main-heading font-extrabold leading-snug">
+              "Your Dream Career is One Skill Away, Join{' '}
+              <span className="highlight">Infinova Eduventures</span> Now!!"
             </h1>
             <button className="contact-btn">
               Contact Us

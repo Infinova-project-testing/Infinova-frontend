@@ -1,48 +1,67 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import '../global.css';
+// Import your logo image - adjust the path as needed
+import logoImage from '/eduventures.png'; // Update this path to your logo location
 
+const Navbar = () => {
+  const [searchQuery, setSearchQuery] = useState('');
 
-export default function EduventuresForUniversitiesNavbar() {
-  const [openMenu, setOpenMenu] = useState(null);
-
-  
+  const handleSearchSubmit = () => {
+    console.log('Search query:', searchQuery);
+    // Handle search functionality here
+  };
 
   return (
-    <div className="eduventuresForUniversityNavbar flex items-center  bg-white">
-      {/* Left: Logo */}
-      <div className="eduventuresForUniversityNavbarLeft flex items-center">
-        <img
-          src="/eduventures.png"
-          alt="Infinova Eduventures"
-          className="eduventuresForUniversityNavbarLogo"
-        />
-      </div>
-
-      {/* Right: Links */}
-      <div className="eduventuresForUniversityNavbarRight hidden md:flex items-center">
-        {/* For Campus */}
-       
-         <h1 className="text-3xl  font-family: Montserrat font-bold w-2xl">
-             For <span className="text-blue-600">Students</span>
-         </h1>
-        
-        {/* Our Programs */}
-        <div className="search-container">
-          <div className="search-input-wrapper ml-4  rounded-lg font-family: Montserrat font-bold ">
-          <input type="text" placeholder="What do you want to learn ?"  className=" search-input"/>
-          <h1></h1>
+    <nav className="navbar">
+      <div className="navbar-container">
+        {/* Logo Section */}
+        <div className="logo-section">
+          <div className="logo">
+            <img 
+              src={logoImage} 
+              alt="Infinova Eduventures - Bridging your Career" 
+              className="logo-image"
+            />
+          </div>
         </div>
-        
+
+        {/* Navigation Links */}
+        <div className="nav-links">
+          <span className="nav-text">For</span>
+          <span className="nav-highlight">Students</span>
+        </div>
+
+        {/* Search Section */}
+        <div className="search-section">
+          <div className="search-form">
+            <div className="search-input-container">
+              <svg className="search-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2"/>
+                <path d="M21 21L16.65 16.65" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+              <input
+                type="text"
+                placeholder="What do you want to learn ?"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="search-input"
+              />
+            </div>
+            <button onClick={handleSearchSubmit} className="search-button">
+              Search
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="mobile-menu-button">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
         </div>
       </div>
-      <div>
-        <button className="text-white bg-blue-600 px-4 py-2 rounded-lg ml-4 font-family: Montserrat font-bold"/> 
-      </div>
-
-      {/* Mobile Menu Icon */}
-      <div className="eduventuresForUniversityNavbarMobile md:hidden flex items-center">
-        <button className="text-2xl">☰</button>
-      </div>
-    </div>
+    </nav>
   );
-}
+};
+
+export default Navbar;
