@@ -45,8 +45,8 @@ const Navbar = () => {
         </div>
       ) : null}
 
-      <div className="innerNavDiv h-full w-[95%] flex justify-between items-center px-2 sm:px-4 md:px-8">
-        <div className="menu h-full flex items-center gap-2 sm:gap-4 w-[40%] sm:w-[30%] md:w-[25%]">
+      <div className="innerNavDiv h-full w-[95%] flex justify-between items-center px-2 sm:px-4 md:px-8 ">
+        <div className="menu  h-full flex items-center gap-2 sm:gap-4 w-full sm:w-[30%] md:w-[25%]">
           <ion-icon
             name={`${icon}-outline`}
             onClick={handleClick}
@@ -56,7 +56,7 @@ const Navbar = () => {
             <img
               src="/global.png"
               alt=""
-              className="object-contain w-[30vw] sm:w-[25vw] md:w-[20vw] cursor-pointer globalIcon"
+              className="object-contain   md:w-[20vw] cursor-pointer globalIcon"
             />
           </NavLink>
         </div>

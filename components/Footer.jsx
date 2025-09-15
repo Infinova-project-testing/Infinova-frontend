@@ -84,15 +84,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-<div className="footer-bottom-wrapper flex justify-center">
-  <div className="footer-bottom-inner w-[85%]  flex justify-between ">
-    <p className="footer-bottom-text"><p>&copy; 2025 Infinova Global. All rights reserved.</p>
-</p>
-  <div className="footer-social-icons">
+           <div className="footer-social-icons">
     <a href="#" aria-label="Facebook">
       <img src="/facebook.png" alt="Facebook" />
     </a>
@@ -106,6 +98,15 @@ const Footer = () => {
       <img src="/youtube.png" alt="YouTube" />
     </a>
   </div>
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+<div className="footer-bottom-wrapper flex justify-center">
+  <div className="footer-bottom-inner w-[85%]  flex justify-between ">
+    <p className="footer-bottom-text"><p>&copy; 2025 Infinova Global. All rights reserved.</p>
+</p>
+ 
   </div>
 </div>
 

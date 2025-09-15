@@ -536,7 +536,8 @@ ion-icon {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  
 }
 
 .footer-social-icons img {
@@ -580,6 +581,9 @@ ion-icon {
   .footer-social-icons img {
     width: 24px;
     height: 24px;
+  }
+  .footer-social-icons  {
+    justify-content: center;
   }
 }
 
@@ -2897,4 +2901,16 @@ ion-icon {
   .stay-tuned {
     color: #E2E8F0;
   }
+}
+.globalIcon{
+  width: 20vw;
+}
+/* For mobile devices */
+@media (max-width: 576px) {
+ .globalIcon{
+  width:50vw;
+ }
+ .hamburgerIcon{
+  font-size: 4rem;
+ }
 }
